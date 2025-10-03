@@ -22,15 +22,15 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            
+        
         }
-        .aurkibide{
+        .aurkibide {
             display: flex;
-            justify-content: center;
             gap: 40px;
-            margin-top: 40px;
-            padding: 20px 0;
-            margin-top: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+            
         }
         .aurkibide div {
             
@@ -43,9 +43,52 @@
             color: #fdfeff;
         
         }
+        .aurkibide-contenedor {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            flex: 1;
+            width: 100%;
+            margin-top: 50px;
+        }
         .header {
             background-color: #f1f6f5;
             margin-top: -60px ;
+    
+        }
+        #menu-toggle {
+            display: none;
+
+        }
+        .menu-btn {
+            cursor: pointer;
+            font-size: 24px;
+            background: #a1a5a8;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-left:10px;  
+        }
+        .menua {
+            display: none;
+            flex-direction: column;
+            background-color: #a1a5a8;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .menua div {
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .menua a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+        #menu-toggle:checked + .menu-btn + .menua {
+            display: flex;
+
         }
         .bilatu {
             display: flex;
@@ -57,6 +100,18 @@
         main {
             flex: 1;
         }
+        .main-contenedor {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            margin-top: 50px;
+        }
+        main > div:last-child {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 40px;
+        }
         .footer {
             background-color: #0c4872;
             text-align: center;
@@ -67,16 +122,41 @@
             text-align: center;
             padding: 70px;          
         }
+        .pelikulak p {
+            color: white;
+            font-size: 20px;
+            font-family: Arial;
+        }
+        .pelikulak .pelis {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .pelikulak a img {
+            transition: transform 0.3s ease; 
+        } 
+        .pelikulak a img:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }      
         .con-marco {
-            border: 5px solid #ffff;
-            padding: 10px;
-            border-radius: 10px;
+                    border: 5px solid #ffff;
+                    padding: 10px;
+                    border-radius: 10px;
         }
         summary {
-            color: #2c91d9;
+            color: #fff;
             margin-left: 70px;
             margin-bottom: 40px;
+            font-size: 30px;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px #000;
+            background-color: #a1a5a8;
+            padding: 15px 25px;
+            border-radius: 15px;
+            cursor: pointer;
         }
+        
         
     </style>
 </head>
@@ -85,41 +165,52 @@
     <header class="header">
         <div class="header-container">
             <a href=""> <img src="erronkalogoa.png" alt="logoa" width="300" height="200"></a>
-
+       
             <form class="bilatu" action="#" method="get">
                 <input type="text" placeholder="Bilatu..."  >
                 <button type="submit"><a href=""><img src="lupalogoa.png" alt="logoa2" width="10" height="10"></a></button>
             </form>
-        </div>
+        </div>   
+    
     </header>
+    
 
-    <main>
-    <nav class="aurkibide">
-        <div class="Informazioa">
-            <h2><a href="informazioa.html">Informazioa</a></h2>
-        </div>
-        <div class="Kartelera">
-            <h2><a href="kartelera.html">Kartelera</a></h2>
-        </div>
-        <div class="Saskia">
-            <h2><a href="saskia.html">Saskia</a></h2>
-        </div>
-        <div class="Balorazioa">
-            <h2><a href="balorazioa.html">Balorazioa</a></h2>
-        </div>
-    </nav>
+    <main class="main-contenedor">
 
-    <nav class="pelikulak">
-        <details><summary><B>GOGOKOENAK</B></summary></details>
-        <div class="pelis">
-            <a href="https://www.imdb.com/es-es/title/tt0120382/"><img src="truman.jpg" alt="truman" class="con-marco" width="300" height="440"></a>
-            <a href="https://www.imdb.com/es/list/ls031369251/"><img src="starwars.jpg" alt="starwars" class="con-marco" width="300" height="440"></a>
-            <a href="https://www.imdb.com/es-es/title/tt0816692/"><img src="intestellar.jpg" alt="intestellar" class="con-marco" width="300" height="440"></a>
-            <a href="https://www.imdb.com/es-es/title/tt1130884/"><img src="shutter.jpg" alt="intestellar" class="con-marco" width="300" height="440"></a>
+        <div class="menu-lateral">  
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-btn"><b>MENU</b></label>
+        
+            <nav class="menua">
+                <div><a href="informazioa.html">Informazioa</a></div>
+                <div><a href="kartelera.html">Kartelera</a></div>
+                <div><a href="saskia.html">Saskia</a></div>
+                <div><a href="balorazioa.html">Balorazioa</a></div>
+            
+                <div><label for="menu-toggle" class="menu-btn"><b>ITXI</b></label></div>
+            
+            </nav>
         </div>
 
-    </nav>
-
+        <div class="aurkibide-contenedor">
+ 
+            <nav class="aurkibide">
+                <div class="Informazioa"><h2><a href="informazioa.html">Informazioa</a></h2></div>
+                <div class="Kartelera"><h2><a href="kartelera.html">Kartelera</a></h2></div>    
+                <div class="Saskia"><h2><a href="saskia.html">Saskia</a></h2></div>               
+                <div class="Balorazioa"><h2><a href="balorazioa.html">Balorazioa</a></h2></div>              
+            </nav>
+        
+            <nav class="pelikulak">
+                <details><summary><B>NABARMENDUENAK</B></summary></details>
+                <div class="pelis">
+                    <a href="https://www.imdb.com/es-es/title/tt0120382/"><img src="truman.jpg" alt="truman" class="con-marco" width="260" height="440"><p>El show de Truman</p></a>
+                    <a href="https://www.imdb.com/es/list/ls031369251/"><img src="starwars.jpg" alt="starwars" class="con-marco" width="260" height="440"><p>Star Wars I: La amenaza fantasma</p></a>
+                    <a href="https://www.imdb.com/es-es/title/tt0816692/"><img src="intestellar.jpg" alt="intestellar" class="con-marco" width="260" height="440"><p>Interstellar</p></a>
+                    <a href="https://www.imdb.com/es-es/title/tt1130884/"><img src="shutter.jpg" alt="intestellar" class="con-marco" width="260" height="440"><p>Shutter Island</p></a>
+                </div>
+            </nav>
+        </div>   
     </main>
 
     <footer class="footer">
