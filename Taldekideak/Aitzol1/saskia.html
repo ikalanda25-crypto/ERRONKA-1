@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="eu">
+
+<head>
+    <title>Zinema Usurbil</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web orri honetan pelikula hoberenak daude ikusgai.">
+    <meta name="author" content="Aitzol Landa">
+
+    <style>
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+            margin: 0; 
+            background-color: #0c4872;
+            flex-direction: column;
+            min-height: 100vh;
+        } 
+        .flecha {
+            position: fixed;   
+            top: 40px;
+            left: 20px;
+            font-size: 20px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            
+        }
+        h1 {
+            text-align: center;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-shadow: 2px 2px 5px #000;
+            background-color: #a1a5a8;
+            padding: 10px 20px;
+            border-radius: 15px;
+            cursor: pointer;
+            margin-left: 30px;
+            margin-bottom: 70px;
+            font-size: 30px;
+            font-weight: bold;
+            width: 600px;
+            margin: 0 auto 70px;
+        }
+        .pelikula {
+        max-width: 700px;
+        min-height: 500px;
+        margin: auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        
+        }
+        select, input[type=zenbaki], button {
+        width: 100%;
+        padding: 10px;
+        margin: 35px 0;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        }
+        button {
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        border: none;
+        }
+        button:hover {
+        background-color: #0056b3;
+        }
+        h2, label {
+        margin: 10px 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <a href="erronka.html" class="flecha">⬅ ITZULI</a>
+
+    <h1><b><u>SASKIA</u></b></h1>
+
+  <div class="pelikula">
+    <h2>Aukeratutako pelikula:</h2>
+
+    <form action="lista" method="lista">
+
+      <label for="pelikulak">Pelikulak:</label>
+      <select id="pelikulak" name="pelikulak" required>
+        <option value="">--Aukeratu ikusteko pelikula--</option>
+        <option value="lilo">Lilo y Stitch</option>
+        <option value="minecraft">Una pelicula de Minecraft</option>
+        <option value="mufasa">Mufasa: El rey leon</option>
+        <option value="dragon">Como entrenar a tu dragon</option>
+        <option value="capitan">Capitan America: Brave New World</option>
+        <option value="conclave">Conclave</option>
+        <option value="sonic">Sonic 3: La película</option>
+        <option value="msion">Mision: Imposible. Sentencia final</option>
+        <option value="blanca">Blancanieves</option>
+        <option value="thunder">Thunderbolt</option>
+        <option value="Padre">Padre no hay mas que uno 5</option>
+        <option value="wolf">Wolfgang</option>
+        <option value="casoplon">El casoplon</option>
+        <option value="funeral">Un funeral de locos</option>
+        <option value="sirat">Sirāt</option>
+      </select>
+
+      <label for="pertona">Zenbat pertsona:</label>
+      <input type="zenbaki" id="pertsona" name="pertsona" min="1" max="10" value="1" required>
+
+      <button type="botoia">Saskira gehitu</button>
+    </form>
+
+  </div>
+
+
+</body>
+
+</html>

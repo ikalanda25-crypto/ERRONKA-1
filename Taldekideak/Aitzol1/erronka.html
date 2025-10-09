@@ -57,7 +57,7 @@
             margin-top: -60px ;
     
         }
-        #menu-toggle {
+        #menu-toggle-arriba {
             display: none;
 
         }
@@ -86,9 +86,8 @@
             color: #fff;
             font-weight: bold;
         }
-        #menu-toggle:checked + .menu-btn + .menua {
+        #menu-toggle-arriba:checked + .menu-btn + .menua {
             display: flex;
-
         }
         .bilatu {
             display: flex;
@@ -112,11 +111,58 @@
             align-items: flex-start;
             gap: 40px;
         }
-        .footer {
-            background-color: #0c4872;
+        footer {
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+            flex-wrap: wrap; 
+            background-color: #f1f6f5;
+            padding: 20px 0;
+            gap: 50px; 
+        }
+
+        footer .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer .menu-abajo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .links {
             text-align: center;
             padding: 20px 0;
             color: #ffff;   
+        }
+        .edukia {
+            padding: 20px 0;
+            color: #000000; 
+        }
+        .menuak {
+            display: none;
+            flex-direction: column;
+            background-color: #a1a5a8;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .menuak div {
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .menuak a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+        #menu-toggle-abajo {
+            display: none;
+        }
+        #menu-toggle-abajo:checked + .menu-btn + .menuak {
+            display: flex;
         }
         .pelikulak a{
             text-align: center;
@@ -178,8 +224,8 @@
     <main class="main-contenedor">
 
         <div class="menu-lateral">  
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="menu-btn"><b>MENU</b></label>
+            <input type="checkbox" id="menu-toggle-arriba">
+            <label for="menu-toggle-arriba" class="menu-btn"><b>MENU</b></label>
         
             <nav class="menua">
                 <div><a href="informazioa.html">Informazioa</a></div>
@@ -187,7 +233,7 @@
                 <div><a href="saskia.html">Saskia</a></div>
                 <div><a href="balorazioa.html">Balorazioa</a></div>
             
-                <div><label for="menu-toggle" class="menu-btn"><b>ITXI</b></label></div>
+                <div><label for="menu-toggle-arriba" class="menu-btn"><b>ITXI</b></label></div>
             
             </nav>
         </div>
@@ -214,18 +260,46 @@
     </main>
 
     <footer class="footer">
+
+        <div class="logo">
+            <a href=""> <img src="erronkalogoa.png" alt="logoa" width="300" height="200"></a>
+        </div>
+
+        <div class="menu-abajo">  
+            <input type="checkbox" id="menu-toggle-abajo">
+            <label for="menu-toggle-abajo" class="menu-btn"><b>MENU</b></label>
+
+            <nav class="menuak">
+                <div><a href="informazioa.html">Informazioa</a></div>
+                <div><a href="kartelera.html">Kartelera</a></div>
+                <div><a href="saskia.html">Saskia</a></div>
+                <div><a href="balorazioa.html">Balorazioa</a></div>
+            
+                <div><label for="menu-toggle-abajo" class="menu-btn"><b>ITXI</b></label></div>
+            
+            </nav>
+
+        </div>
+
         <div class="links">
             <a href="https://www.instagram.com/"><img src="insta.jpg" alt="insta" width="40" height="40"></a>
             <a href="https://www.tiktok.com/es-419/"><img src="tiktok.png" alt="tiktok" width="40" height="40"></a>
             <a href="https://x.com/?lang=es"><img src="twitter.png" alt="twitter" width="40" height="40"></a>
             <a href="https://www.youtube.com/"><img src="yt.jpg" alt="yt" width="40" height="40"></a>
             <a href="https://es.linkedin.com/"><img src="linkedin.png" alt="linkedin" width="40" height="40"></a>
-
-
         </div>
 
-        <p>&copy;2025 Zinema Usurbil eduki desberdinak</p>
+        <div class="edukia">
+            <p>&copy;2025 Zinema Usurbil eduki desberdinak</p>
+        </div>
 
+        <ul class="legala">    
+            <li>Ohar legala</li>
+            <li>Cookiak</li>
+            <li>Creative Commons</li>           
+        </ul>
+  
+    
     </footer>
   
 </body>
